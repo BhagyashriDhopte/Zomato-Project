@@ -1,0 +1,205 @@
+﻿'popularcuisinesnear1
+
+Function Popularcuisinesnear1()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser("Zomato").Page("Zomato").WebButton("Popular cuisines near").Click
+res12=Browser("Zomato").Page("Zomato").GetROProperty("text")
+res11=DataTable.Value("Expected_Value","Test Data")
+If instr(res11,res12)>=0  Then
+	Reporter.ReportEvent micPass,"Zomato_5","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Zomato_5","Fail"
+End If
+If instr(res11,res12)>=0  Then
+	Popularcuisinesnear1 = "Pass"
+	Else
+       Popularcuisinesnear1 = "Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'Bakeryrestaurantsnearme2()
+
+Function Bakeryrestaurantsnearme2()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser("Zomato").Page("Zomato").WebButton("Popular cuisines near").Click
+Browser("Zomato").Page("Zomato").Link("Bakery food near me").Click
+res14=Browser("Zomato").Page("Best Bakery restaurants").WebElement("Bakery restaurants near").GetROProperty("text")
+res13=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res13,res14)=0  Then
+	Reporter.ReportEvent micPass,"Bakery restaurants near me","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Bakery restaurants near me","Fail"
+End If
+If strcomp(res13,res14)=0  Then
+	Bakeryrestaurantsnearme2 ="Pass"
+     Else
+       Bakeryrestaurantsnearme2 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+' Beveragesrestauranatsnearme3()
+
+Function Beveragesrestauranatsnearme3()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser("Zomato").Page("Zomato").WebButton("Popular cuisines near").Click
+Browser("Zomato").Page("Zomato").Link("Beverages food near me").Click
+res16=Browser("Zomato").Page("Best Beverages restaurants").WebElement("Beverages restaurants").GetROProperty("text")
+res15=DataTable.Value("Expected_Value","Test Data")
+If instr(res15,res16)>=0  Then
+	Reporter.ReportEvent micPass,"Beverages restauranats near me/","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Beverages restauranats near me/","Fail"
+End If
+If instr(res15,res16)>=0  Then
+	Beveragesrestauranatsnearme3 ="Pass"
+     Else
+       Beveragesrestauranatsnearme3 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'Continentalrestaurantsnearme4()
+
+Function Continentalrestaurantsnearme4()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))	
+Browser("Zomato").Page("Zomato").WebButton("Popular cuisines near").Click
+Browser("Zomato").Page("Zomato").Link("Continental food near").Click
+res18=Browser("Zomato").Page("Best Continental restaurants").WebElement("Continental restaurants").GetROProperty("text")
+res17=DataTable.Value("Expected_Value","Test Data")
+If instr(res17,res18)>=0  Then
+	Reporter.ReportEvent micPass,"Continental restaurants near me/_2","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Continental restaurants near me/_2","Fail"
+End If
+If instr(res17,res18)>=0  Then
+	Continentalrestaurantsnearme4 ="Pass"
+     Else
+       Continentalrestaurantsnearme4 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'Dessertsrestaurantsnearme5()
+
+Function Dessertsrestaurantsnearme5()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))	
+Browser("Zomato").Page("Zomato").WebButton("Popular cuisines near").Click
+Browser("Zomato").Page("Zomato").Link("Desserts food near me").Click
+res20=Browser("Zomato").Page("Best Desserts restaurants").WebElement("Desserts restaurants near").GetROProperty("text")
+res19=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res19,res20)=0  Then
+	Reporter.ReportEvent micPass,"Desserts restaurants near me/","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Desserts restaurants near me/","Fail"
+End If
+If strcomp(res19,res20)=0  Then
+	Dessertsrestaurantsnearme5 ="Pass"
+     Else
+       Dessertsrestaurantsnearme5 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'Aboutwhoareyou6()
+
+Function Aboutwhoareyou6()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser("Zomato").Page("Zomato").Link("Who We Are").Click
+res22=Browser("Zomato").Page("Who We Are").WebElement("For over a decade now,").GetROProperty("text")
+res21=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res21,res22)=0  Then
+	Reporter.ReportEvent micPass,"For over a decade now, we’ve been empowering our users in discovering new tastes and experiences across countries. By putting together meticulous information for our users, we enable them to make an informed choice.","Pass"
+     Else
+       Reporter.ReportEvent micFail,"For over a decade now, we’ve been empowering our users in discovering new tastes and experiences across countries. By putting together meticulous information for our users, we enable them to make an informed choice.","Fail"
+End If
+If strcomp(res21,res22)=0  Then
+	 Aboutwhoareyou6 ="Pass"
+     Else
+        Aboutwhoareyou6 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+
+'Blog7()
+
+Function Blog7()
+SystemUtil.Run"Chrome.exe"
+Browser("Zomato").Navigate(DataTable.Value("url","Test Data"))		
+Browser("Zomato").Page("Zomato").Link("Blog").Click
+res24=Browser("Zomato").Page("Zomato Blog").Link("All Categories").GetROProperty("text")
+res23=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res23,res24)=0  Then
+	Reporter.ReportEvent micPass,"All Categories","Pass"
+     Else
+       Reporter.ReportEvent micFail,"All Categories","Fail"
+End If
+If strcomp(res23,res24)=0  Then
+	 Blog7 ="Pass"
+     Else
+        Blog7 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'Aboutworkwithus8()
+
+Function Aboutworkwithus8()
+SystemUtil.Run"Chrome.exe"
+Browser("Zomato").Navigate(DataTable.Value("url","Test Data"))		
+Browser("Zomato").Page("Zomato").Link("Work With Us").Click
+res26=Browser("Zomato").Page("Zomato Careers - Apply").WebElement("Careers").GetROProperty("text")
+res25=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res25,res26)=0  Then
+	Reporter.ReportEvent micPass,"Careers","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Careers","Fail"
+End If
+If strcomp(res25,res26)=0  Then
+	 Aboutworkwithus8 ="Pass"
+     Else
+        Aboutworkwithus8 ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+
+' Reportfraud9()
+
+Function Reportfraud9()
+SystemUtil.Run"Chrome.exe"
+Browser("Zomato").Navigate(DataTable.Value("url","Test Data"))		
+Browser("Zomato").Page("Zomato").Link("Report Fraud").Click
+res28=Browser("Zomato").Page("Report Fraud | Zomato").WebElement("Report a potential fraud").GetROProperty("text")
+res27=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res27,res28)=0  Then
+	Reporter.ReportEvent micPass,"Report a potential fraud","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Report a potential fraud","Fail"
+End If
+If strcomp(res27,res28)=0  Then
+	Reportfraud20="Pass"
+     Else
+       Reportfraud20="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+	
+End Function
+
+
+
+
+
+
+
+
+
+

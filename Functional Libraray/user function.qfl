@@ -1,0 +1,220 @@
+﻿'1 Popularcuisinesnear...................................................................................................................................................
+
+Function Popularcuisinesnear()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser(browserObject).Page(PageObject).WebButton(spageObject).Click
+wait(3)
+res2 = Browser(BrowserObject).Page(PageObject).GetROProperty("text")
+res1=DataTable.Value("Expected_Value","Test Data")
+If instr(res1,res2)>=0  Then
+	Reporter.ReportEvent micPass,"Zomato_5","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Zomato_5","Fail"
+End If
+If instr(res1,res2)>=0  Then
+	Popularcuisinesnear = "Pass"
+	Else
+       Popularcuisinesnear = "Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'2 Bakeryrestaurantsnearme...........................................................................................................................................................................................
+
+Function Bakeryrestaurantsnearme()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser(browserObject).Page(PageObject).WebButton(spageObject).Click
+wait(2)
+Browser(browserObject).Page(PageObject).Link(tpageObject).Click
+wait(2)
+res4=Browser(browserObject).Page(PageObject).WebElement(tspageObject).GetROProperty("text")
+res3=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res3,res4)=0  Then
+	Reporter.ReportEvent micPass,"Bakery restaurants near me","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Bakery restaurants near me","Fail"
+End If
+If strcomp(res3,res4)=0  Then
+	Bakeryrestaurantsnearme ="Pass"
+     Else
+       Bakeryrestaurantsnearme ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'3 Beveragesrestauranatsnearme
+
+Function Beveragesrestauranatsnearme()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+wait(3)
+Browser(browserObject).Page(PageObject).WebButton(spageObject).Click
+wait(3)
+Browser(browserObject).Page(PageObject).Link(linkObject).Click
+res6=Browser(browserObject).Page(PageObject).WebElement(link1Object).GetROProperty("text")
+res5=DataTable.Value("Expected_Value","Test Data")
+If instr(res5,res6)>=0  Then
+	Reporter.ReportEvent micPass,"Beverages restauranats near me/","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Beverages restauranats near me/","Fail"
+End If
+If instr(res5,res6)>=0  Then
+	Beveragesrestauranatsnearme ="Pass"
+     Else
+       Beveragesrestauranatsnearme ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'4 Continentalrestaurantsnearme
+
+Function Continentalrestaurantsnearme()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))	
+Browser(browserObject).Page(PageObject).WebButton(spageObject).Click
+wait(2)
+Browser(browserObject).Page(PageObject).Link(conObject).Click
+res8=Browser(browserObject).Page(PageObject).WebElement(con1Object).GetROProperty("text")
+res7=DataTable.Value("Expected_Value","Test Data")
+If instr(res7,res8)>=0  Then
+	Reporter.ReportEvent micPass,"Continental restaurants near me/_2","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Continental restaurants near me/_2","Fail"
+End If
+If instr(res7,res8)>=0  Then
+	Continentalrestaurantsnearme ="Pass"
+     Else
+       Continentalrestaurantsnearme ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'5 Dessertsrestaurantsnearme
+
+Function Dessertsrestaurantsnearme()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser(browserObject).Page(PageObject).WebButton(spageObject).Click
+wait(2)
+Browser(browserObject).Page(PageObject).Link(desObject).Click
+res10=Browser(browserObject).Page(PageObject).WebElement(des1Object ).GetROProperty("text")
+res9=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res9,res10)=0  Then
+	Reporter.ReportEvent micPass,"Desserts restaurants near me/","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Desserts restaurants near me/","Fail"
+End If
+If strcomp(res9,res10)=0  Then
+	Dessertsrestaurantsnearme ="Pass"
+     Else
+       Dessertsrestaurantsnearme ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'6 Aboutwhoareyou
+
+Function Aboutwhoareyou()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))
+Browser(browserObject).Page(PageObject).Link(areObject).Click
+res12=Browser(browserObject).Page(PageObject).WebElement(are2Object).GetROProperty("text")
+res11=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res11,res12)=0  Then
+	Reporter.ReportEvent micPass,"For over a decade now, we’ve been empowering our users in discovering new tastes and experiences across countries. By putting together meticulous information for our users, we enable them to make an informed choice.","Pass"
+     Else
+       Reporter.ReportEvent micFail,"For over a decade now, we’ve been empowering our users in discovering new tastes and experiences across countries. By putting together meticulous information for our users, we enable them to make an informed choice.","Fail"
+End If
+If strcomp(res11,res12)=0  Then
+	 Aboutwhoareyou ="Pass"
+     Else
+        Aboutwhoareyou ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'7 Blog
+
+Function Blog()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))	
+Browser(browserObject).Page(PageObject).Link(blogObject).Click
+res14=Browser(browserObject).Page(PageObject).Link(blog2Object).GetROProperty("text")
+res13=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res13,res14)=0  Then
+	Reporter.ReportEvent micPass,"All Categories","Pass"
+     Else
+       Reporter.ReportEvent micFail,"All Categories","Fail"
+End If
+If strcomp(res13,res14)=0  Then
+	 Blog ="Pass"
+     Else
+        Blog ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'8 Aboutworkwithus
+
+Function Aboutworkwithus()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))		
+Browser(browserObject).Page(PageObject).Link(workObject).Click
+res16=Browser(browserObject).Page(PageObject).WebElement(navObject).GetROProperty("text")
+res15=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res15,res16)=0  Then
+	Reporter.ReportEvent micPass,"Careers","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Careers","Fail"
+End If
+If strcomp(res15,res16)=0  Then
+	 Aboutworkwithus ="Pass"
+     Else
+        Aboutworkwithus ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+'9 Investorrelations
+
+Function Investorrelations()	
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))	
+Browser(browserObject).Page(PageObject).Link(invObject).Click
+res18=Browser(browserObject).Page(PageObject).WebElement( inv2Object).GetROProperty("text")
+res17=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res17,res18)=0  Then
+	Reporter.ReportEvent micPass,"| Investor Relations","Pass"
+     Else
+       Reporter.ReportEvent micFail,"| Investor Relations","Fail"
+End If
+If strcomp(res17,res18)=0  Then
+	 Investorrelations ="Pass"
+     Else
+        Investorrelations ="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function
+
+' 10 Reportfraud
+
+Function Reportfraud()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate(DataTable.Value("url","Test Data"))		
+Browser(browserObject).Page(PageObject).Link(fraObject).Click
+res20=Browser(browserObject).Page(PageObject).WebElement(fra1Object).GetROProperty("text")
+res19=DataTable.Value("Expected_Value","Test Data")
+If strcomp(res19,res20)=0  Then
+	Reporter.ReportEvent micPass,"Report a potential fraud","Pass"
+     Else
+       Reporter.ReportEvent micFail,"Report a potential fraud","Fail"
+End If
+If strcomp(res19,res20)=0  Then
+	Reportfraud="Pass"
+     Else
+       Reportfraud="Fail"
+End If
+SystemUtil.CloseProcessByName"Chrome.exe"
+End Function

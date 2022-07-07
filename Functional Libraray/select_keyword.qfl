@@ -1,0 +1,103 @@
+﻿Function executeTest(testCaseID)
+    Select Case testCaseID
+        Case "TC_001"
+            services.StartTransaction "TC_001"
+              Environment.Value("Result")=Popularcuisinesnear()
+            services.EndTransaction "TC_001"
+            
+        Case "TC_002"
+            services.StartTransaction "TC_002"
+               Environment.Value("Result")=Bakeryrestaurantsnearme()
+            services.EndTransaction "TC_002"
+        
+         Case "TC_003"
+            services.StartTransaction "TC_003"
+               Environment.Value("Result")=Beveragesrestauranatsnearme()
+            services.EndTransaction "TC_003"
+            
+        Case "TC_004"
+            services.StartTransaction "TC_004"
+              Environment.Value("Result")=Continentalrestaurantsnearme()
+            services.EndTransaction "TC_004"
+            
+         Case "TC_005"
+            services.StartTransaction "TC_005"
+              Environment.Value("Result")=Dessertsrestaurantsnearme()
+            services.EndTransaction "TC_005"
+            
+        Case "TC_006"
+            services.StartTransaction "TC_006"
+               Environment.Value("Result")=Aboutwhoareyou()
+            services.EndTransaction "TC_006"
+            
+         Case "TC_007"
+            services.StartTransaction "TC_007"
+               Environment.Value("Result")=Blog()
+            services.EndTransaction "TC_007"
+            
+        Case "TC_008"
+            services.StartTransaction "TC_008"
+                Environment.Value("Result")=Aboutworkwithus()
+            services.EndTransaction "TC_008"
+            
+            Case "TC_009"
+            services.StartTransaction "TC_009"
+               Environment.Value("Result")=Investorrelations()
+            services.EndTransaction "TC_009"
+            
+        Case "TC_010"
+            services.StartTransaction "TC_010"
+                Environment.Value("Result")=Reportfraud()
+            services.EndTransaction "TC_010"
+          
+          Case "TC_011"
+            services.StartTransaction "TC_011"
+                Environment.Value("Result")=Popularcuisinesnear1()	
+            services.EndTransaction "TC_011"
+            
+            Case "TC_012"
+            services.StartTransaction "TC_012"
+                Environment.Value("Result")=Bakeryrestaurantsnearme2()
+            services.EndTransaction "TC_012"
+            
+            Case "TC_013"
+            services.StartTransaction "TC_013"
+               Environment.Value("Result")= Beveragesrestauranatsnearme3()	
+            services.EndTransaction "TC_013"
+            
+            Case "TC_014"
+            services.StartTransaction "TC_014"
+                Environment.Value("Result")=Continentalrestaurantsnearme4()	
+            services.EndTransaction "TC_014"
+            
+            Case "TC_015"
+            services.StartTransaction "TC_015"
+                Environment.Value("Result")=Dessertsrestaurantsnearme5()	
+            services.EndTransaction "TC_015"
+            
+            Case "TC_016"
+            services.StartTransaction "TC_016"
+                Environment.Value("Result")=Aboutwhoareyou6()	
+            services.EndTransaction "TC_016"
+            
+            Case "TC_017"
+            services.StartTransaction "TC_017"
+                Environment.Value("Result")=Blog7()	
+            services.EndTransaction "TC_017"
+            
+            Case "TC_018"
+            services.StartTransaction "TC_018"
+                Environment.Value("Result")=Aboutworkwithus8()	
+            services.EndTransaction "TC_018"
+            
+            
+            
+            Case "TC_019"
+            services.StartTransaction "TC_019"
+                Environment.Value("Result")= Reportfraud9()
+            services.EndTransaction "TC_019"
+    End Select
+    
+    
+End Function
+

@@ -1,0 +1,91 @@
+﻿Dim url, searchString, resultString,res1,res2
+
+'1 Popularcuisinesnear
+
+Set browserObject = Description.Create
+browserObject("creationtime").value = "0"
+
+Set PageObject = Description.Create
+PageObject("micclass").value = "Page"
+
+Set spageObject = Description.Create
+spageObject("xpath").value = "//DIV[1]/SECTION[1]/DIV[1]/DIV[@role='button'][1]"
+
+'2 Bakeryrestaurantsnearme
+
+Set tpageObject = Description.Create
+tpageObject("xpath").value = "//DIV/SECTION/DIV/SECTION/DIV/A[normalize-space()='Bakery food near me']"
+
+Set tspageObject = Description.Create
+tspageObject("xpath").value = "//DIV[3]/DIV[1]/DIV[1]/H1[1]"
+
+'3 Beveragesrestauranatsnearme
+
+Set linkObject = Description.Create
+linkObject("xpath").value = "//DIV[1]/SECTION[1]/DIV[1]/SECTION[1]/DIV[1]/A[3]"
+
+Set link1Object = Description.Create
+link1Object("xpath").value = "//DIV[3]/DIV[1]/DIV[1]/H1[1]"
+
+
+'4 Continentalrestaurantsnearme
+
+Set conObject = Description.Create
+conObject("xpath").value ="//DIV[1]/SECTION[1]/DIV[1]/SECTION[1]/DIV[1]/A[8]"
+
+Set con1Object = Description.Create
+con1Object("xpath").value ="//DIV[3]/DIV[1]/DIV[1]/H1[1]"
+
+'5 Dessertsrestaurantsnearme
+
+Set desObject = Description.Create
+desObject("xpath").value = "//DIV[1]/SECTION[1]/DIV[1]/SECTION[1]/DIV[1]/A[9]"
+
+Set des1Object = Description.Create
+des1Object("xpath").value = "//DIV[3]/DIV[1]/DIV[1]/H1[1]"
+
+'6 Aboutwhoareyou
+
+Set areObject = Description.Create
+areObject("xpath").value = "//DIV/NAV/A[normalize-space()='Who We Are']"
+
+Set are2Object = Description.Create
+are2Object("xpath").value = "//SECTION[1]/DIV[1]/P[1]"
+
+'7 Blog
+
+Set blogObject = Description.Create
+blogObject("url").value ="https://blog.zomato.com/"
+
+Set blog2Object = Description.Create
+blog2Object("xpath").value ="//LI/A[normalize-space()='All Categories']"
+
+'8 Aboutworkwithus
+
+Set workObject = Description.Create
+workObject("xpath").value ="//DIV/NAV/A[normalize-space()='Work With Us']"
+
+Set navObject = Description.Create
+navObject("xpath").value = "//LI/A[normalize-space()='Careers']"
+
+'9 Investorrelations
+
+Set invObject = Description.Create
+invObject("xpath").value = "//DIV[1]/NAV[1]/A[4]"
+
+Set inv2Object = Description.Create
+inv2Object("xpath").value ="//DIV[@id='root']/DIV[1]/HEADER[1]/NAV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]"
+
+' 10 Reportfraud
+
+Set fraObject = Description.Create
+fraObject("xpath").value ="//DIV/NAV/A[normalize-space()='Report Fraud']"
+
+Set fra1Object = Description.Create
+fra1Object("xpath").value = "//DIV[@id='root']/DIV[1]/DIV[3]/H1[1]"
+
+
+
+
+
+
